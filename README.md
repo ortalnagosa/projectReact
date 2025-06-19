@@ -2,7 +2,7 @@
 
 פרויקט זה הוא מערכת אינטראקטיבית לניהול כרטיסים אישיים/עסקיים, כולל אפשרות להרשמה, כניסה, עריכת פרופיל, יצירת כרטיסים, לייקים, חיפוש, וסינון. הממשק מותאם לכל סוגי המסכים.
 
-🌐 **לינק לפרויקט:** [https://react-97nm.onrender.com](https://react-97nm.onrender.com)
+🌐 **לינק לפרויקט:** (https://projectreact-5gsn.onrender.com)
 
 ## תכונות עיקריות
 
