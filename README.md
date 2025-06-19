@@ -1,30 +1,37 @@
-# React + TypeScript + Vite
+# כרטיסים אישיים - React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+פרויקט זה הוא מערכת אינטראקטיבית לניהול כרטיסים אישיים/עסקיים, כולל אפשרות להרשמה, כניסה, עריכת פרופיל, יצירת כרטיסים, לייקים, חיפוש, וסינון. הממשק מותאם לכל סוגי המסכים.
 
-Currently, two official plugins are available:
+🌐 **לינק לפרויקט:** [https://react-97nm.onrender.com](https://react-97nm.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## תכונות עיקריות
 
-## Expanding the ESLint configuration
+✅ הרשמה וכניסת משתמשים  
+✅ עריכת פרופיל משתמש במודל  
+✅ יצירה, עריכה ומחיקה של כרטיסים  
+✅ סימון לייקים לכל כרטיס  
+✅ הצגת כרטיסים אישיים בעמוד נפרד  
+✅ פגינציה להצגה מדורגת של כרטיסים  
+✅ חיפוש כרטיסים לפי טקסט  
+✅ טופסי יצירה/עריכה עם אימות Joi  
+✅ שימוש ב-Redux לניהול סטייט  
+✅ עיצוב עם Flowbite (מבוסס TailwindCSS)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## טכנולוגיות
 
-- Configure the top-level `parserOptions` property like this:
+- React + TypeScript  
+- Redux Toolkit  
+- React Router  
+- Flowbite + TailwindCSS  
+- Axios  
+- React Hook Form  
+- Joi  
+- Render – פריסת הפרויקט אונליין
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+## התקנת הפרויקט באופן מקומי
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```bash
+git clone https://github.com/ortalnagosa/react
+cd react
+npm install
+npm run dev
