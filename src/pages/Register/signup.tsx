@@ -35,8 +35,8 @@ const Signup = () => {
         country: "",
         city: "",
         street: "",
-        houseNumber: "",
-        zip: "",
+        houseNumber: 0,
+        zip: 0,
       },
     },
     mode: "onChange",
@@ -51,10 +51,13 @@ const Signup = () => {
   const submitForm = async (data: Tsignup) => {
     console.log("Form submitted", data);
     setIsSubmitting(true);
+
+    const { confirmPassword, isAdmin, ...cleanData } = data;
+
     try {
       await axios.post(
         "https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users",
-        data,
+        cleanData,
       );
 
       console.log("Success");
@@ -238,7 +241,7 @@ const Signup = () => {
               type="number"
               color={errors.address?.houseNumber ? "error" : undefined}
             />
-            {!houseNumber?.trim() && (
+            {houseNumber ===0 && (
               <p className="mt-1 text-xs text-gray-500">*Required</p>
             )}
             <ErrorMessage error={errors.address?.houseNumber} />
@@ -251,7 +254,7 @@ const Signup = () => {
               type="number"
               color={errors.address?.zip ? "error" : undefined}
             />
-            {!zip?.trim() && (
+            {zip === 0 && (
               <p className="mt-1 text-xs text-gray-500">*Required</p>
             )}
             <ErrorMessage error={errors.address?.zip} />

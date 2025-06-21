@@ -19,8 +19,8 @@ export type Tsignup = {
     country: string;
     city: string;
     street: string;
-    houseNumber: string;
-    zip: string;
+    houseNumber: number;
+    zip: number;
   };
   isBusiness: boolean;
   isAdmin: boolean;
