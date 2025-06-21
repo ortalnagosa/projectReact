@@ -14,8 +14,8 @@ export type TupdateUser = {
     country: string;
     city: string;
     street: string;
-    houseNumber: string;
-    zip: string;
+    houseNumber?: string; 
+    zip?: string; 
   };
   isAdmin?: boolean;
   isBusiness?: boolean;
