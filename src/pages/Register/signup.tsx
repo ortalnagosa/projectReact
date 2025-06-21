@@ -3,11 +3,11 @@ import { Button, FloatingLabel, Spinner } from "flowbite-react";
 import { useForm, useWatch } from "react-hook-form";
 import { registerSchema } from "../../validations/FormSchema.joi";
 import { joiResolver } from "@hookform/resolvers/joi";
-import { Tsignup } from "../../types/signupType";
 import Flex, { Aligns, FlexDirectionTypes } from "../../types/Flex";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Tsignup } from "../../types/signupType";
 
 const Signup = () => {
   const {
@@ -241,7 +241,7 @@ const Signup = () => {
               type="number"
               color={errors.address?.houseNumber ? "error" : undefined}
             />
-            {houseNumber ===0 && (
+            {!houseNumber && (
               <p className="mt-1 text-xs text-gray-500">*Required</p>
             )}
             <ErrorMessage error={errors.address?.houseNumber} />
@@ -254,7 +254,7 @@ const Signup = () => {
               type="number"
               color={errors.address?.zip ? "error" : undefined}
             />
-            {zip === 0 && (
+            {!zip && (
               <p className="mt-1 text-xs text-gray-500">*Required</p>
             )}
             <ErrorMessage error={errors.address?.zip} />

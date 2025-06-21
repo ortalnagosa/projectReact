@@ -20,3 +20,4 @@ export type TupdateUser = {
   isAdmin?: boolean;
   isBusiness?: boolean;
 };
+  
